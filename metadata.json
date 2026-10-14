@@ -1,0 +1,6 @@
+{
+  "name": "The Human Glitch",
+  "description": "An archival psychology publication exploring strange memories, déjà vu, cognitive biases, and the limits of human perception.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
