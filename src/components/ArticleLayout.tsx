@@ -96,6 +96,12 @@ export const ArticleLayout: React.FC<ArticleLayoutProps> = ({ article, onNavigat
             alt={article.heroAlt}
             referrerPolicy="no-referrer"
             className="w-full h-auto max-h-[540px] object-cover filter contrast-[1.03] sepia-[0.08]"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (target.src.endsWith('.webp')) {
+                target.src = target.src.replace('.webp', '.jpg');
+              }
+            }}
           />
           <div className="absolute top-3 left-3 bg-[#FAF7EF]/90 backdrop-blur-xs px-2.5 py-1 text-[11px] font-mono uppercase tracking-wider text-[#873B30] border border-[#873B30]/40">
             Archival Exhibit Plate

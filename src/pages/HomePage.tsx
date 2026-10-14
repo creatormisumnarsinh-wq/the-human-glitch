@@ -106,7 +106,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="relative p-2 bg-[#FAF7EF] border border-[#9B927D] shadow-md rounded-xs">
               <div className="relative border border-[#9B927D]/40 overflow-hidden bg-[#29251F]">
                 <img
-                  src="/src/assets/images/homepage_archive_collage_1792001391927.jpg"
+                  src="/images/homepage-archive-collage.webp"
                   alt="Archival psychological research collage showing study notes, neural diagrams, and pattern recognition equipment"
                   referrerPolicy="no-referrer"
                   className="w-full h-auto object-cover filter contrast-[1.04]"
@@ -238,8 +238,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                       <img
                         src={article.heroImage}
                         alt={article.heroAlt}
+                        loading="lazy"
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover filter contrast-[1.02] group-hover:scale-102 transition-transform duration-300"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          // Fallback to jpg if webp fails
+                          if (target.src.endsWith('.webp')) {
+                            target.src = target.src.replace('.webp', '.jpg');
+                          }
+                        }}
                       />
                       <div className="absolute bottom-2 left-2 bg-[#FAF7EF]/90 backdrop-blur-xs px-2 py-0.5 text-[10px] font-mono uppercase text-[#873B30] border border-[#873B30]/30 font-bold">
                         {article.caseNumber}

@@ -51,7 +51,7 @@ export default function App() {
           description:
             'Explore strange memories, human psychology, and the hidden mental shortcuts that shape how we experience reality.',
           canonicalPath: '/',
-          image: '/src/assets/images/homepage_archive_collage_1792001391927.jpg',
+          image: '/images/homepage-archive-collage.webp',
           type: 'website',
           keywords: [
             'human psychology',
