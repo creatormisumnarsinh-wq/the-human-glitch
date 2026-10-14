@@ -1,5 +1,6 @@
 {
   "name": "react-example",
+  "description": "The Human Glitch psychology archive",
   "private": true,
   "version": "0.0.0",
   "type": "module",
