@@ -47,10 +47,27 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
         directAnswer: 'Scientific evidence indicates we experience déjà vu due to a momentary desynchronization between how incoming sensory information is perceived and how it is routed through the brain’s recognition circuits, particularly via dual-processing lag or gestalt spatial familiarity.',
         marginalNote: 'Dr. Anne Cleary’s virtual reality experiments at Colorado State University proved that spatial layouts can trigger déjà vu even when the physical objects differ entirely.',
         bodyParagraphs: [
-          'Over decades of laboratory research, cognitive psychologists have identified three primary evidence-based mechanisms explaining why familiar moments occur:',
-          '1. Dual-Processing Theory (The Microsecond Transmission Lag): In ordinary cognitive function, perceptual pathways process incoming sensory stimuli simultaneously. Under the dual-processing hypothesis, a tiny millisecond transmission delay occurs along one neural route—perhaps due to mild exhaustion, dopamine fluctuations, or slight neurotransmitter latency. When the second signal arrives fractions of a second later, the brain treats it not as an ongoing sensory feed, but as an encoded past memory being retrieved.',
-          '2. Gestalt Spatial Familiarity: Pioneered by cognitive psychologist Dr. Anne Cleary, the Gestalt Familiarity hypothesis suggests that déjà vu occurs when the physical layout of an environment matches an environment previously encountered, even if all specific objects are entirely novel. For instance, the geometric arrangement of furniture, window placement, and door spacing in an airport lounge may replicate your childhood living room. Your brain extracts the spatial abstract and triggers a "familiarity alert," but cannot retrieve the original memory source, generating the eerie mismatch.',
-          '3. Divided Attention (Single-Millisecond Subliminal Perception): If you glance at a scene while distracted—for instance, glancing across a street while checking your phone—your subconscious retina and perceptual cortex register the visual contours before full attention arrives. A half-second later, when you look up with full conscious awareness, the scene feels hauntingly familiar because you just processed it beneath conscious awareness.'
+          'Over decades of laboratory research, cognitive psychologists have identified distinct evidence-based mechanisms explaining why familiar moments occur without an episodic memory:',
+        ],
+        subsections: [
+          {
+            title: 'Dual-Processing Theory: The Microsecond Transmission Delay',
+            paragraphs: [
+              'In ordinary cognitive function, perceptual pathways process incoming sensory stimuli simultaneously. Under the dual-processing hypothesis, a tiny millisecond transmission delay occurs along one neural route—perhaps due to mild exhaustion, dopamine fluctuations, or slight neurotransmitter latency. When the second signal arrives fractions of a second later, the brain treats it not as an ongoing sensory feed, but as an encoded past memory being retrieved.',
+            ],
+          },
+          {
+            title: 'Gestalt Spatial Familiarity: Abstract Environmental Geometry',
+            paragraphs: [
+              'Pioneered by cognitive psychologist Dr. Anne Cleary, the Gestalt Familiarity hypothesis suggests that déjà vu occurs when the physical layout of an environment matches an environment previously encountered, even if all specific objects are entirely novel. For instance, the geometric arrangement of furniture, window placement, and door spacing in an airport lounge may replicate your childhood living room. Your brain extracts the spatial abstract and triggers a "familiarity alert," but cannot retrieve the original memory source, generating the eerie mismatch.',
+            ],
+          },
+          {
+            title: 'Divided Attention: Subconscious Perceptual Encoding',
+            paragraphs: [
+              'If you glance at a scene while distracted—for instance, glancing across a street while checking your phone—your subconscious retina and perceptual cortex register the visual contours before full attention arrives. A half-second later, when you look up with full conscious awareness, the scene feels hauntingly familiar because you just processed it beneath conscious awareness.',
+            ],
+          },
         ],
         keyTakeaway: 'Déjà vu arises when the brain registers an abstract geometric or perceptual match from your past without being able to retrieve the specific contextual source.'
       },
@@ -97,7 +114,7 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
         bodyParagraphs: [
           'While both phenomena fall under the broader umbrella of cognitive paramnesias, their mechanisms, psychological convictions, and neurological substrates diverge substantially.',
           'In déjà vu, reality testing remains entirely intact. You never attempt to argue in a court of law that you previously signed a lease in the building you are visiting for the first time. The paradox is conscious and transparent.',
-          'In contrast, a false memory—such as recalling that you were lost in a shopping mall as a toddler when no such incident occurred—carries unshakeable narrative conviction. The individual fabricates details, sensory specifics, and emotional states, completely convinced of the factual truth of the fabricated scene. As cognitive psychologist Alan Brown observed, déjà vu is an illusion of familiarity; false memory is a phantom reality.'
+          'In contrast, [why the brain creates false memories](/why-does-your-brain-create-false-memories)—such as recalling that you were lost in a shopping mall as a toddler when no such incident occurred—carries unshakeable narrative conviction. The individual fabricates details, sensory specifics, and emotional states, completely convinced of the factual truth of the fabricated scene. As cognitive psychologist Alan Brown observed, déjà vu is an illusion of familiarity; false memory is a phantom reality.'
         ],
         tableData: {
           caption: 'Table 2: Comparative Diagnostic Matrix: Déjà Vu vs. False Memory',
@@ -204,6 +221,7 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
         marginalNote: 'Seminal quote from Dr. Elizabeth Loftus: "Memory is like a sketchpad where new information rewires old lines."',
         bodyParagraphs: [
           'In cognitive psychology, false memories are recognized as everyday products of our brain’s normal cognitive architecture, rather than signs of psychological dysfunction or conscious deceit. When an individual relates a false memory, they are not lying; they experience genuine physiological certainty, vivid sensory imagery, and authentic emotional resonance.',
+          'Unlike the fleeting temporal anomaly of [why we experience déjà vu](/why-do-we-experience-deja-vu)—where the mind immediately recognizes that an overwhelming feeling of familiarity is logically impossible—a false memory produces an unshakeable conviction of historical truth without triggering conscious error detection.',
           'Memory distortion occurs across a wide spectrum: from minor details—such as mistakenly recalling that a traffic light was red instead of yellow, or that a speaker wore a navy jacket instead of black—to rich, autobiographical fabrications, such as remembering a childhood trip to a hot air balloon festival that family records confirm never occurred.',
           'Understanding false memories requires discarding the intuitive "recording studio" metaphor. Memory is constructive. When you recall your eighth birthday party, your brain does not pull a finished video cassette from a filing cabinet. Instead, it retrieves scattered fragments—a taste of frosting, the color of a ribbon, a family photograph seen years later—and knits them together into a coherent story in the present moment.'
         ],
@@ -216,10 +234,32 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
         marginalNote: 'Loftus & Palmer (1974) proved that changing a single verb from "hit" to "smashed" increased speed estimates by nearly 20% and generated false memories of broken glass.',
         bodyParagraphs: [
           'Cognitive neuroscience has pinpointed four primary psychological and neurological mechanisms that actively manufacture memory distortions:',
-          '1. The Misinformation Effect: Pioneered by cognitive psychologist Dr. Elizabeth Loftus, the misinformation effect demonstrates that introducing misleading information after an event contaminates the original memory. In a classic 1974 study, participants watched film footage of a car collision. When asked "How fast were the cars going when they smashed into each other?", participants estimated significantly higher speeds than those asked how fast the cars were going when they "contacted" each other. One week later, when asked if they saw broken glass, 32% of the "smashed" group falsely remembered broken glass—even though none existed in the film.',
-          '2. Source Monitoring Breakdown: Formulated by Marcia Johnson, the Source Monitoring Framework explains that our brains must constantly infer where a piece of information originated. Did you experience an event firsthand, hear about it from a cousin, dream it, or see it in a photograph? When source attribution fails, an imagined event or second-hand story is falsely tagged as a first-person autobiographical memory.',
-          '3. Schema-Driven Reconstruction: Schemas are mental frameworks that organize our expectations about how the world works. When memories have missing details, the brain automatically fills in the blanks with whatever matches the schema. If you recall visiting a doctor’s office, your brain might insert a stethoscope on the table or a white coat, even if the clinician wore ordinary clothes.',
-          '4. Social Contagion of Memory: When groups reminisce, one person’s erroneous remark ("Remember when the dog fell into the lake on that camping trip?") can quickly spread. Listening to another person confidently recount a detail causes our own hippocampus to visualize it, eventually consolidating it into our own personal memory.'
+        ],
+        subsections: [
+          {
+            title: 'The Misinformation Effect: Post-Event Suggestion and Framing',
+            paragraphs: [
+              'Pioneered by cognitive psychologist Dr. Elizabeth Loftus, the misinformation effect demonstrates that introducing misleading information after an event contaminates the original memory. In a classic 1974 study, participants watched film footage of a car collision. When asked "How fast were the cars going when they smashed into each other?", participants estimated significantly higher speeds than those asked how fast the cars were going when they "contacted" each other. One week later, when asked if they saw broken glass, 32% of the "smashed" group falsely remembered broken glass—even though none existed in the film.',
+            ],
+          },
+          {
+            title: 'Source Monitoring Breakdown: Confusing Imagination with Experience',
+            paragraphs: [
+              'Formulated by Marcia Johnson, the Source Monitoring Framework explains that our brains must constantly infer where a piece of information originated. Did you experience an event firsthand, hear about it from a cousin, dream it, or see it in a photograph? When source attribution fails, an imagined event or second-hand story is falsely tagged as a first-person autobiographical memory.',
+            ],
+          },
+          {
+            title: 'Schema-Driven Reconstruction: Filling Gaps with Expectations',
+            paragraphs: [
+              'Schemas are mental frameworks that organize our expectations about how the world works. When memories have missing details, the brain automatically fills in the blanks with whatever matches the schema. If you recall visiting a doctor’s office, your brain might insert a stethoscope on the table or a white coat, even if the clinician wore ordinary clothes.',
+            ],
+          },
+          {
+            title: 'Social Contagion of Memory: Collaborative Fabrication',
+            paragraphs: [
+              'When groups reminisce, one person’s erroneous remark ("Remember when the dog fell into the lake on that camping trip?") can quickly spread. Listening to another person confidently recount a detail causes our own hippocampus to visualize it, eventually consolidating it into our own personal memory.',
+            ],
+          },
         ],
         keyTakeaway: 'The brain prioritizes narrative coherence over strict historical accuracy, filling sensory gaps using contextual cues and expectations.'
       },
@@ -267,7 +307,7 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
           '1. Immediate Contemporary Documentation: Write down or record key details immediately following a critical event before social discussion or sleep can initiate reconsolidation drift. Contemporary notes remain our best defense against retrospective bias.',
           '2. Rigorous Source-Monitoring: Practice conscious metacognition. When recalling an event, deliberately ask yourself: "Do I actually remember seeing this with my own eyes, or did someone tell me this happened? Did I see a photograph later?" Identifying the true channel prevents imagination inflation.',
           '3. Neutral, Open-Ended Questioning: In legal, professional, and therapeutic contexts, avoid leading questions. Structured approaches like the Cognitive Interview protocol—which encourages witnesses to report what they remember without speculative guessing—consistently yield far higher accuracy.',
-          '4. Embracing Metacognitive Humility: Recognize that high subjective confidence does not correlate reliably with factual memory accuracy. Knowing that your brain naturally fabricates details is the first step toward verifying facts before acting on assumptions.'
+          '4. Embracing Metacognitive Humility: Recognize that high subjective confidence does not correlate reliably with factual memory accuracy. Because memory reconstruction relies on intuitive mental shortcuts, it shares common vulnerabilities with [cognitive biases in psychology](/psychology-of-cognitive-biases), such as confirmation bias and the framing effect.'
         ],
         keyTakeaway: 'The single most effective defense against false memories is cultivating healthy skepticism toward our own confidence and relying on contemporary physical evidence.'
       }
@@ -368,7 +408,8 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
         bodyParagraphs: [
           'The concept of cognitive biases was formalized by cognitive psychologists Amos Tversky and Daniel Kahneman in their pioneering work during the early 1970s. Prior to their research, traditional economic models assumed human beings were rational actors—"Homo economicus"—who carefully weighed all probabilities, gathered comprehensive data, and calculated optimal outcomes.',
           'Kahneman and Tversky demonstrated that the reality of human cognition is vastly different. Because the human brain consumes roughly 20% of the body’s metabolic energy despite accounting for only 2% of body weight, it operates under severe computational and energetic constraints.',
-          'To cope with a deluge of sensory inputs, information overload, and the need for rapid decisions under existential threat, the brain developed heuristics: simple, automatic rules of thumb. In everyday environments, heuristics work remarkably well. However, in modern contexts—such as financial investing, legal analysis, medical diagnosis, and statistical risk—these shortcuts produce consistent, measurable errors known as cognitive biases.'
+          'To cope with a deluge of sensory inputs, information overload, and the need for rapid decisions under existential threat, the brain developed heuristics: simple, automatic rules of thumb. Just as temporal transmission delays can trigger the illusion of [déjà vu](/why-do-we-experience-deja-vu) without true episodic recall, cognitive heuristics produce rapid intuitive confidence without analytical verification.',
+          'In everyday environments, heuristics work remarkably well. However, in modern contexts—such as financial investing, legal analysis, medical diagnosis, and statistical risk—these shortcuts produce consistent, measurable errors known as cognitive biases.'
         ],
         keyTakeaway: 'Cognitive biases are not random mistakes; they are predictable systematic patterns resulting from the brain balancing speed against analytical precision.'
       },
@@ -378,13 +419,40 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
         directAnswer: 'Common types of cognitive biases include confirmation bias, anchoring bias, the availability heuristic, the sunk cost fallacy, hindsight bias, and the framing effect, each influencing how we evaluate evidence, risk, and value.',
         marginalNote: 'Kahneman’s "Thinking, Fast and Slow" maps these shortcuts to System 1 (fast, effortless, emotional) vs System 2 (slow, deliberate, analytical).',
         bodyParagraphs: [
-          'Psychologists categorize hundreds of known biases into distinct families based on the cognitive function they affect. Six of the most influential biases in everyday decision-making are:',
-          '1. Confirmation Bias: The tendency to seek out, interpret, favor, and recall information that confirms preexisting beliefs while systematically discounting or ignoring contradictory evidence.',
-          '2. Anchoring Bias: The disproportionate reliance on the first piece of information offered (the "anchor") when making numerical estimates or decisions. For example, if a jacket is initially marked at $400 and discounted to $150, it feels like an exceptional bargain, regardless of whether the item is genuinely worth $150.',
-          '3. Availability Heuristic: Estimating the frequency, probability, or danger of an event based on how easily examples spring to mind. Following sensational news reports of a plane crash or shark attack, people overestimate the likelihood of those rare events compared to far more statistically dangerous hazards like automotive accidents or heart disease.',
-          '4. Sunk Cost Fallacy: Continuing an endeavor, investment, or relationship once an investment in money, effort, or time has been made, even when future costs clearly outweigh any prospective benefits. Rather than cutting losses, people "throw good money after bad" to avoid the psychological pain of admitting loss.',
-          '5. Hindsight Bias (The "I Knew It All Along" Effect): The inclination to see an event as having been predictable after it has occurred, despite there having been little or no objective basis for predicting it beforehand.',
-          '6. Framing Effect: Drawing different conclusions from the same information depending on how the information is presented. A surgical procedure with a "90% survival rate" is perceived much more favorably than one with a "10% mortality rate," despite the numerical facts being completely identical.'
+          'Psychologists categorize hundreds of known biases into distinct families based on the cognitive function they affect. Key foundational biases frequently observed in everyday decision-making include:',
+        ],
+        subsections: [
+          {
+            title: 'Confirmation Bias: Preferential Filtering of Belief-Consistent Data',
+            paragraphs: [
+              'The tendency to seek out, interpret, favor, and recall information that confirms preexisting beliefs while systematically discounting or ignoring contradictory evidence. Rather than evaluating facts objectively, the mind treats supporting data as truth and dissenting data as an anomaly.',
+            ],
+          },
+          {
+            title: 'Anchoring Bias: Disproportionate Weight on Initial Reference Points',
+            paragraphs: [
+              'The disproportionate reliance on the first piece of information offered (the "anchor") when making numerical estimates or decisions. For example, if a jacket is initially marked at $400 and discounted to $150, it feels like an exceptional bargain, regardless of whether the item is genuinely worth $150.',
+            ],
+          },
+          {
+            title: 'The Availability Heuristic: Estimating Risk via Immediate Recall',
+            paragraphs: [
+              'Estimating the frequency, probability, or danger of an event based on how easily examples spring to mind. Following sensational news reports of a plane crash or shark attack, people overestimate the likelihood of those rare events compared to far more statistically dangerous hazards like automotive accidents or heart disease.',
+            ],
+          },
+          {
+            title: 'The Sunk Cost Fallacy: Defending Irrevocable Resource Investments',
+            paragraphs: [
+              'Continuing an endeavor, investment, or relationship once an investment in money, effort, or time has been made, even when future costs clearly outweigh any prospective benefits. Rather than cutting losses, people "throw good money after bad" to avoid the psychological pain of admitting loss.',
+            ],
+          },
+          {
+            title: 'Hindsight Bias and Framing Effects: Distorting Memory and Context',
+            paragraphs: [
+              'Hindsight bias (the "I knew it all along" effect) is the inclination to see an event as having been predictable after it has occurred, despite there having been little or no objective basis for predicting it beforehand. Crucially, hindsight bias directly distorts episodic recall, causing individuals to rewrite past predictions in a manner similar to [how false memories form](/why-does-your-brain-create-false-memories) through retroactive suggestion.',
+              'Similarly, the framing effect demonstrates that drawing different conclusions from identical information depends heavily on how the facts are presented. For example, a surgical procedure described as having a "90% survival rate" is perceived much more favorably than one with a "10% mortality rate," despite the numerical facts being completely identical.',
+            ],
+          },
         ],
         tableData: {
           caption: 'Table 4: Core Cognitive Biases, Mechanisms, and Real-World Scenarios',

@@ -20,11 +20,17 @@ export interface AcademicReference {
   significance: string;
 }
 
+export interface ArticleSubsection {
+  title: string;
+  paragraphs: string[];
+}
+
 export interface ArticleSection {
   id: string;
   questionTitle: string;
   directAnswer: string;
   bodyParagraphs: string[];
+  subsections?: ArticleSubsection[];
   marginalNote?: string;
   tableData?: {
     caption: string;

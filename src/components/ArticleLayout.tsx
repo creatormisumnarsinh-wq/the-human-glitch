@@ -41,6 +41,39 @@ export const ArticleLayout: React.FC<ArticleLayoutProps> = ({ article, onNavigat
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Helper to parse markdown links [Anchor Text](/path) into interactive accessible internal links
+  const renderFormattedText = (text: string) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = linkRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index));
+      }
+      const anchorText = match[1];
+      const targetPath = match[2];
+      parts.push(
+        <a
+          key={match.index}
+          href={targetPath}
+          onClick={(e) => handleInternalNav(targetPath as RoutePath, e)}
+          className="text-[#873B30] font-semibold underline decoration-[#873B30]/50 underline-offset-4 hover:decoration-[#873B30] hover:text-[#29251F] transition-colors"
+        >
+          {anchorText}
+        </a>
+      );
+      lastIndex = match.index + match[0].length;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : text;
+  };
+
   return (
     <article className="min-h-screen">
       {/* Editorial Breadcrumbs & Accession Bar */}
@@ -160,9 +193,27 @@ export const ArticleLayout: React.FC<ArticleLayoutProps> = ({ article, onNavigat
                 {/* Body Paragraphs */}
                 <div className="space-y-4 text-base text-[#29251F] leading-relaxed font-sans">
                   {section.bodyParagraphs.map((para, pIdx) => (
-                    <p key={pIdx}>{para}</p>
+                    <p key={pIdx}>{renderFormattedText(para)}</p>
                   ))}
                 </div>
+
+                {/* Subsections with Semantic H3 Headings */}
+                {section.subsections && section.subsections.length > 0 && (
+                  <div className="space-y-8 mt-8 pt-2">
+                    {section.subsections.map((sub, sIdx) => (
+                      <div key={sIdx} className="space-y-3">
+                        <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#29251F]">
+                          {sub.title}
+                        </h3>
+                        <div className="space-y-4 text-base text-[#29251F] leading-relaxed font-sans">
+                          {sub.paragraphs.map((p, pIdx) => (
+                            <p key={pIdx}>{renderFormattedText(p)}</p>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 {/* Marginal Annotation Note */}
                 {section.marginalNote && (
@@ -252,22 +303,29 @@ export const ArticleLayout: React.FC<ArticleLayoutProps> = ({ article, onNavigat
                     >
                       <button
                         type="button"
-                        onClick={() => toggleFaq(index)}
-                        className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 font-serif font-semibold text-base sm:text-lg text-[#29251F] hover:text-[#873B30] transition-colors cursor-pointer"
+                        id={`faq-btn-${index}`}
+                        aria-controls={`faq-panel-${index}`}
                         aria-expanded={isOpen}
+                        onClick={() => toggleFaq(index)}
+                        className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 font-serif font-semibold text-base sm:text-lg text-[#29251F] hover:text-[#873B30] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#873B30] transition-colors cursor-pointer"
                       >
                         <span>{faq.question}</span>
                         {isOpen ? (
-                          <ChevronUp className="w-5 h-5 text-[#873B30] shrink-0" />
+                          <ChevronUp className="w-5 h-5 text-[#873B30] shrink-0" aria-hidden="true" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-[#6D6559] shrink-0" />
+                          <ChevronDown className="w-5 h-5 text-[#6D6559] shrink-0" aria-hidden="true" />
                         )}
                       </button>
-                      {isOpen && (
-                        <div className="px-5 pb-5 pt-1 text-sm font-sans text-[#29251F] leading-relaxed border-t border-[#9B927D]/20 bg-[#F1E7D2]/20">
-                          <p className="mb-0">{faq.answer}</p>
-                        </div>
-                      )}
+                      <div
+                        id={`faq-panel-${index}`}
+                        role="region"
+                        aria-labelledby={`faq-btn-${index}`}
+                        className={`px-5 text-sm font-sans text-[#29251F] leading-relaxed border-t border-[#9B927D]/20 bg-[#F1E7D2]/20 overflow-hidden transition-all duration-200 ${
+                          isOpen ? 'max-h-96 py-4 opacity-100' : 'max-h-0 py-0 opacity-0 pointer-events-none'
+                        }`}
+                      >
+                        <p className="mb-0">{faq.answer}</p>
+                      </div>
                     </div>
                   );
                 })}
