@@ -39,7 +39,10 @@ export function updatePageSEO(options: {
   }
 
   // Canonical link
-  const canonicalUrl = `${BASE_URL}${options.canonicalPath === '/' ? '' : options.canonicalPath}`;
+  const canonicalUrl =
+    options.canonicalPath === '/'
+      ? `${BASE_URL}/`
+      : `${BASE_URL}${options.canonicalPath}`;
   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
   if (!canonicalLink) {
     canonicalLink = document.createElement('link');
