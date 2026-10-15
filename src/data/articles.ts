@@ -16,7 +16,7 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
     subtitle: 'An investigation into temporal lobe desynchronization, gestalt spatial geometry, and the brain’s metacognitive error-checking mechanism.',
     deck: 'You step into a library in a city you have never visited, turn a corner, and a sudden, disorienting shock of recognition freezes you: you have lived this exact millisecond before. Yet rational inspection tells you that is physically impossible.',
     heroImage: '/images/deja-vu-corridor.webp',
-    heroAlt: 'A quiet, vintage symmetrical corridor with patterned wallpaper and warm sconces evoking repetitive recognition',
+    heroAlt: 'Quiet, vintage hotel corridor with symmetrical doors, patterned wallpaper, and warm wall sconces',
     heroCaption: 'Figure 1.1 — The sensation of subjective familiarity without objective recollection. Photographic study in spatial recurrence and perceptual alignment.',
     abstractText: 'Déjà vu is an illusory subjective conviction of familiarity occurring alongside an objective awareness that the familiarity is impossible. Far from being a mystical anomaly, contemporary cognitive neuroscience identifies déjà vu as a healthy metacognitive mismatch: the temporal lobe signals recognition while the frontal cortex confirms the experience is brand new.',
     tableOfContents: [
@@ -184,7 +184,7 @@ export const ARTICLES: Record<string, CaseFileArticle> = {
     subtitle: 'An analysis of constructive recall, synaptic reconsolidation, misinformation cascades, and source-monitoring vulnerabilities.',
     deck: 'Most people treat human memory like an immutable video camera recording continuous documentary footage of their lives. In reality, memory behaves like a Wikipedia page: anyone with subtle suggestion can edit the entry, including you.',
     heroImage: '/images/false-memories-distortion.webp',
-    heroAlt: 'A vintage black and white double exposure photograph showing overlapping silhouettes and faded room textures representing memory distortion',
+    heroAlt: "Vintage black-and-white double-exposure photograph of a person's profile superimposed over a bedroom and bare tree branches",
     heroCaption: 'Figure 2.1 — Superimposition and trace erosion in human recollection. Archival study on retroactive interference and narrative reconstruction.',
     abstractText: 'Human memory is not a reproductive archive; it is a generative, constructive process. Every time a memory is retrieved, the neural trace becomes biochemically unstable through reconsolidation, absorbing new assumptions, post-event questions, and imaginative elements before being rewritten into long-term storage.',
     tableOfContents: [
